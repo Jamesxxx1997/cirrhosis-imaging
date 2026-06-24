@@ -324,6 +324,14 @@ function buildChildPughCard(card) {
     <ul class="cutoff-list">
       ${calc.classes.map((c) => `<li><b>${esc(c.cls)}(${esc(c.range)})</b> — ${esc(c.detail)}</li>`).join('')}
     </ul>
+    <div class="he-grade-box">
+      <div class="he-grade-title">肝性腦病變臨床分級參考(West Haven)</div>
+      <table class="he-grade-table">
+        <tbody>
+          ${calc.encephalopathyGrades.map((g) => `<tr><th>${esc(g.level)}<br>${esc(g.name)}</th><td>${esc(g.detail)}</td></tr>`).join('')}
+        </tbody>
+      </table>
+    </div>
   `;
   card.querySelector('.compute-btn').onclick = () => {
     const total = calc.inputs.reduce((sum, inp) => sum + parseInt(document.getElementById(`cp-${inp.id}`).value, 10), 0);

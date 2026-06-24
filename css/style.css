@@ -405,6 +405,28 @@ table.diff-table td.feature { font-weight: 700; background: var(--teal-50); }
 }
 .cutoff-list b { color: var(--teal-700); }
 
+.he-grade-box { margin-top: 14px; }
+.he-grade-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--teal-700);
+  margin-bottom: 6px;
+}
+.he-grade-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.he-grade-table th, .he-grade-table td {
+  border: 1px solid var(--line);
+  padding: 6px 8px;
+  text-align: left;
+  vertical-align: top;
+}
+.he-grade-table th {
+  background: var(--teal-50);
+  color: var(--teal-900);
+  font-weight: 700;
+  width: 36%;
+  white-space: nowrap;
+}
+
 /* ---------- Treatment / prognosis lists ---------- */
 .section-card {
   background: var(--card-bg);

@@ -464,6 +464,12 @@ const CALCULATORS = {
       { range: '7 – 9 分', cls: 'Class B', detail: '功能顯著受損(significant functional compromise),一年存活率約 80%' },
       { range: '10 – 15 分', cls: 'Class C', detail: '通常對應失代償性肝硬化(decompensated),一年存活率約 45%' },
     ],
+    encephalopathyGrades: [
+      { level: 'Grade 1', name: '混亂 Confusion', detail: '個性改變、答非所問、日夜顛倒' },
+      { level: 'Grade 2', name: '嗜睡 Lethargy', detail: '說話判斷力差,手及身體不自覺顫抖' },
+      { level: 'Grade 3', name: '半昏迷 Stupor', detail: '大部分時間都在睡眠的狀態,但可以叫醒' },
+      { level: 'Grade 4', name: '昏迷 Coma', detail: '叫不醒' },
+    ],
   },
 };
 
