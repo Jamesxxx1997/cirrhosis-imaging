@@ -234,7 +234,7 @@ function renderImaging() {
     </div>
 
     <div style="background:#fef3e2;border:1px solid #fde68a;border-radius:8px;padding:11px 14px;font-size:12px;color:#92400e;line-height:1.5;margin-bottom:8px;">
-      <b>Reference</b>：Saverymuttu SH, Joseph AEA, Maxwell JD. "Ultrasound scanning in the detection of hepatic fibrosis and steatosis." <i>Br Med J (Clin Res Ed)</i> 1986;292:13–15. · 臨界值 ≥ 6.5 對肝硬化特異度 100%（單一研究）；臨床判讀請結合 FIB-4 / APRI / Fibroscan。
+      <b>Reference</b>：Nishiura T et al. "Ultrasound evaluation of the fibrosis stage in chronic liver disease by the simultaneous use of low and high frequency probes." <i>Br J Radiol</i> 2005;78:189–197. · 主要閾值：≥ 6.5 對肝硬化 sensitivity &amp; PPV 均 100%；≤ 3 對 Stage 0–1 sensitivity 100%（單一研究，n=103）。
     </div>
   `;
 
@@ -497,13 +497,16 @@ function pldCalcCI() {
     let color, html;
     if (total >= 6.5) {
       color = '#b91c1c';
-      html = '<b style="color:' + color + '">肝硬化 Cirrhosis（Stage F4）</b><br>總分 ≥ 6.5 — 研究中所有病人均為第 4 期纖維化，作者認為此分數對肝硬化具 <b>100% 特異度</b>。建議積極追蹤並轉介肝臟科。';
-    } else if (total > 0) {
+      html = '<b style="color:' + color + '">肝硬化 Cirrhosis（Stage F4）</b><br>總分 ≥ 6.5 — 研究中所有 Stage 4 患者均落於此區間（sensitivity 100%），且所有 ≥ 6.5 者也都是 Stage 4（PPV 100%）。建議轉介肝臟科。';
+    } else if (total > 3) {
       color = '#d97706';
-      html = '<b style="color:' + color + '">慢性肝病變 Chronic liver disease</b><br>總分 &gt; 0 代表有肝實質變化。分數 &lt; 6.5 不排除輕至中度纖維化，請結合 FIB-4 / APRI / Fibroscan 及臨床判讀。';
+      html = '<b style="color:' + color + '">中間帶（Stage 2–3 可能）</b><br>總分 3–6.5：不排除 bridging fibrosis（Stage 2–3）。請結合 FIB-4 / APRI / Fibroscan 及臨床判讀。';
+    } else if (total > 0) {
+      color = '#0369a1';
+      html = '<b style="color:' + color + '">輕度纖維化 Mild fibrosis（Stage 0–1 可能）</b><br>總分 &gt; 0 且 ≤ 3 — 研究中 42/53 分數 ≤ 3 的患者屬 Stage 0–1（specificity 79.2%）。有輕度肝實質變化，建議追蹤。';
     } else {
       color = '#047857';
-      html = '<b style="color:' + color + '">正常 Normal</b><br>三項特徵均無異常，超音波上無慢性肝病變表現。';
+      html = '<b style="color:' + color + '">正常（Stage 0 可能）</b><br>總分 = 0 — 三項特徵均無異常。研究中 6/8 Stage 0 患者落於此分數（仍需臨床整合）。';
     }
     totEl.style.color = color;
     resEl.innerHTML = html;
