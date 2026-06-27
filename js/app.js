@@ -90,6 +90,10 @@ function renderImaging() {
 
     <div class="summary-box" id="summary-box"></div>
 
+    <div style="margin:18px 0 8px;padding:8px 14px;background:var(--teal-900);color:#fff;border-radius:8px;font-weight:700;font-size:15px;">
+      肝硬化 Cirrhosis — 影像徵象
+    </div>
+
     <div class="explorer-wrap">
       <div class="explorer-list">
         <div class="list-col">
@@ -102,6 +106,135 @@ function renderImaging() {
         </div>
       </div>
       <div class="explorer-detail" id="explorer-detail"></div>
+    </div>
+
+    <div style="margin:28px 0 8px;padding:8px 14px;background:var(--teal-700);color:#fff;border-radius:8px;font-weight:700;font-size:15px;">
+      Parenchymal Liver Disease / Chronic Liver Disease — 超音波評分
+    </div>
+
+    <div class="section-card" style="margin-bottom:16px;">
+      <p style="font-size:13px;color:var(--ink-soft);margin:0 0 12px;">評估三個超音波特徵（肝緣、肝表面、肝實質紋理），<b>左右肝葉分別打分後取平均</b>，三項平均分相加為總分（0–8）。<br>高頻（5–12 MHz）偵測輕度變化；低頻（2–5 MHz）確認重度變化。</p>
+      <table style="width:100%;border-collapse:collapse;font-size:12.5px;">
+        <tr style="background:var(--teal-100);"><th style="padding:6px 8px;text-align:left;border:1px solid var(--line);">特徵</th><th style="padding:6px 8px;border:1px solid var(--line);">0 分</th><th style="padding:6px 8px;border:1px solid var(--line);">1 分</th><th style="padding:6px 8px;border:1px solid var(--line);">2 分</th><th style="padding:6px 8px;border:1px solid var(--line);">3 分</th><th style="padding:6px 8px;border:1px solid var(--line);">範圍</th></tr>
+        <tr><td style="padding:5px 8px;border:1px solid var(--line);font-weight:700;">肝緣 Liver edge</td><td style="padding:5px 8px;border:1px solid var(--line);">銳利（高頻）</td><td style="padding:5px 8px;border:1px solid var(--line);">輕度鈍化（高頻）</td><td style="padding:5px 8px;border:1px solid var(--line);">明顯鈍化（低頻）</td><td style="padding:5px 8px;border:1px solid var(--line);color:#9ca3af;">—</td><td style="padding:5px 8px;border:1px solid var(--line);">0–2</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:5px 8px;border:1px solid var(--line);font-weight:700;">肝表面 Liver surface</td><td style="padding:5px 8px;border:1px solid var(--line);">平滑（高頻）</td><td style="padding:5px 8px;border:1px solid var(--line);">輕度不規則（高頻）</td><td style="padding:5px 8px;border:1px solid var(--line);">不規則（低頻）</td><td style="padding:5px 8px;border:1px solid var(--line);">高度不規則（低頻）</td><td style="padding:5px 8px;border:1px solid var(--line);">0–3</td></tr>
+        <tr><td style="padding:5px 8px;border:1px solid var(--line);font-weight:700;">肝實質紋理 Texture</td><td style="padding:5px 8px;border:1px solid var(--line);">細緻（高頻）</td><td style="padding:5px 8px;border:1px solid var(--line);">輕度粗糙（高頻）</td><td style="padding:5px 8px;border:1px solid var(--line);">粗糙（低頻）</td><td style="padding:5px 8px;border:1px solid var(--line);">高度粗糙（低頻）</td><td style="padding:5px 8px;border:1px solid var(--line);">0–3</td></tr>
+      </table>
+      <p style="font-size:11.5px;color:var(--ink-soft);margin:6px 0 0;">技巧：肝實質 coarse 判斷可與脾臟比較，若回音差不多則相對正常。</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:16px;">
+      <div class="section-card" style="padding:12px;">
+        <div style="font-size:12px;font-weight:700;color:var(--teal-700);margin-bottom:6px;">Fig 1 — 肝緣 Liver Edge</div>
+        <img src="assets/pld_fig1_edge.jpg" style="width:100%;border-radius:6px;border:1px solid var(--line);" alt="Liver edge scoring">
+        <p style="font-size:11px;color:var(--ink-soft);margin:5px 0 0;">(a) 銳利 0 · (b) 輕度鈍化 1 (高頻) · (c) 明顯鈍化 2 (低頻)</p>
+      </div>
+      <div class="section-card" style="padding:12px;">
+        <div style="font-size:12px;font-weight:700;color:var(--teal-700);margin-bottom:6px;">Fig 2 — 肝表面 Liver Surface</div>
+        <img src="assets/pld_fig2_surface.jpg" style="width:100%;border-radius:6px;border:1px solid var(--line);" alt="Liver surface scoring">
+        <p style="font-size:11px;color:var(--ink-soft);margin:5px 0 0;">(a) 平滑 0 · (b) 輕度不規則 1 · (c) 不規則 2 · (d) 高度不規則 3 (低頻)</p>
+      </div>
+      <div class="section-card" style="padding:12px;">
+        <div style="font-size:12px;font-weight:700;color:var(--teal-700);margin-bottom:6px;">Fig 3 — 肝實質紋理 Parenchymal Texture</div>
+        <img src="assets/pld_fig3_texture.jpg" style="width:100%;border-radius:6px;border:1px solid var(--line);" alt="Parenchymal texture scoring">
+        <p style="font-size:11px;color:var(--ink-soft);margin:5px 0 0;">(a) 細緻 0 · (b) 輕度粗糙 1 · (c) 粗糙 2 · (d) 高度粗糙 3 (低頻)</p>
+      </div>
+    </div>
+
+    <div class="calc-card" style="margin-bottom:16px;">
+      <h3>計算機 US Score Calculator</h3>
+      <p class="summary">左右肝葉各打一分 → 自動計算三項平均並加總 → 判斷結果</p>
+
+      <div style="margin-bottom:14px;">
+        <div style="font-size:13px;font-weight:700;color:var(--teal-700);margin-bottom:6px;">① 肝緣 Liver Edge　<span style="font-weight:400;font-size:11.5px;color:var(--ink-soft);">高頻 0–1 / 低頻 2</span></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 80px;gap:10px;align-items:end;">
+          <div><label for="ci_edge_r">右肝 Right</label>
+            <select id="ci_edge_r" onchange="pldCalcCI()">
+              <option value="">— 選擇 —</option>
+              <option value="0">0 — 銳利</option>
+              <option value="1">1 — 輕度鈍化</option>
+              <option value="2">2 — 明顯鈍化</option>
+            </select></div>
+          <div><label for="ci_edge_l">左肝 Left</label>
+            <select id="ci_edge_l" onchange="pldCalcCI()">
+              <option value="">— 選擇 —</option>
+              <option value="0">0 — 銳利</option>
+              <option value="1">1 — 輕度鈍化</option>
+              <option value="2">2 — 明顯鈍化</option>
+            </select></div>
+          <div style="text-align:center;padding-bottom:6px;">
+            <div style="font-size:11px;color:var(--ink-soft);font-weight:700;">平均</div>
+            <div id="ci_edge_avg" style="font-size:1.4rem;font-weight:800;color:var(--teal-700);">—</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:14px;">
+        <div style="font-size:13px;font-weight:700;color:var(--teal-700);margin-bottom:6px;">② 肝表面 Liver Surface　<span style="font-weight:400;font-size:11.5px;color:var(--ink-soft);">高頻 0–1 / 低頻 2–3</span></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 80px;gap:10px;align-items:end;">
+          <div><label for="ci_surf_r">右肝 Right</label>
+            <select id="ci_surf_r" onchange="pldCalcCI()">
+              <option value="">— 選擇 —</option>
+              <option value="0">0 — 平滑</option>
+              <option value="1">1 — 輕度不規則</option>
+              <option value="2">2 — 不規則</option>
+              <option value="3">3 — 高度不規則</option>
+            </select></div>
+          <div><label for="ci_surf_l">左肝 Left</label>
+            <select id="ci_surf_l" onchange="pldCalcCI()">
+              <option value="">— 選擇 —</option>
+              <option value="0">0 — 平滑</option>
+              <option value="1">1 — 輕度不規則</option>
+              <option value="2">2 — 不規則</option>
+              <option value="3">3 — 高度不規則</option>
+            </select></div>
+          <div style="text-align:center;padding-bottom:6px;">
+            <div style="font-size:11px;color:var(--ink-soft);font-weight:700;">平均</div>
+            <div id="ci_surf_avg" style="font-size:1.4rem;font-weight:800;color:var(--teal-700);">—</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:14px;">
+        <div style="font-size:13px;font-weight:700;color:var(--teal-700);margin-bottom:6px;">③ 肝實質紋理 Parenchymal Texture　<span style="font-weight:400;font-size:11.5px;color:var(--ink-soft);">高頻 0–1 / 低頻 2–3</span></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 80px;gap:10px;align-items:end;">
+          <div><label for="ci_tex_r">右肝 Right</label>
+            <select id="ci_tex_r" onchange="pldCalcCI()">
+              <option value="">— 選擇 —</option>
+              <option value="0">0 — 細緻</option>
+              <option value="1">1 — 輕度粗糙</option>
+              <option value="2">2 — 粗糙</option>
+              <option value="3">3 — 高度粗糙</option>
+            </select></div>
+          <div><label for="ci_tex_l">左肝 Left</label>
+            <select id="ci_tex_l" onchange="pldCalcCI()">
+              <option value="">— 選擇 —</option>
+              <option value="0">0 — 細緻</option>
+              <option value="1">1 — 輕度粗糙</option>
+              <option value="2">2 — 粗糙</option>
+              <option value="3">3 — 高度粗糙</option>
+            </select></div>
+          <div style="text-align:center;padding-bottom:6px;">
+            <div style="font-size:11px;color:var(--ink-soft);font-weight:700;">平均</div>
+            <div id="ci_tex_avg" style="font-size:1.4rem;font-weight:800;color:var(--teal-700);">—</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;background:var(--teal-50);border-radius:8px;padding:14px 16px;border:1.5px solid #b2dfdb;">
+        <div style="text-align:center;min-width:80px;">
+          <div style="font-size:11px;color:var(--ink-soft);font-weight:700;text-transform:uppercase;letter-spacing:.05em;">總分</div>
+          <div id="ci_total" style="font-size:2.4rem;font-weight:800;color:var(--teal-900);">—</div>
+          <div style="font-size:10px;color:#9ca3af;">max 8</div>
+        </div>
+        <div id="ci_result" style="flex:1;font-size:13px;line-height:1.6;min-width:180px;color:var(--ink);">
+          <span style="color:#9ca3af;">填入六個欄位後自動計算。</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:#fef3e2;border:1px solid #fde68a;border-radius:8px;padding:11px 14px;font-size:12px;color:#92400e;line-height:1.5;margin-bottom:8px;">
+      <b>Reference</b>：Saverymuttu SH, Joseph AEA, Maxwell JD. "Ultrasound scanning in the detection of hepatic fibrosis and steatosis." <i>Br Med J (Clin Res Ed)</i> 1986;292:13–15. · 臨界值 ≥ 6.5 對肝硬化特異度 100%（單一研究）；臨床判讀請結合 FIB-4 / APRI / Fibroscan。
     </div>
   `;
 
@@ -340,6 +473,41 @@ function buildChildPughCard(card) {
     resultEl.innerHTML = `總分 = ${total} 分 → ${cls.cls}<span class="verdict">${esc(cls.detail)}</span>`;
     resultEl.classList.add('show');
   };
+}
+
+/* ---------------- PLD calculator ---------------- */
+function pldCalcCI() {
+  const ids = ['ci_edge_r','ci_edge_l','ci_surf_r','ci_surf_l','ci_tex_r','ci_tex_l'];
+  const els = ids.map((id) => document.getElementById(id));
+  if (els.some((e) => !e)) return;
+  const [er, el, sr, sl, tr_, tl] = els.map((e) => e.value);
+  const edgeAvg = (er !== '' && el  !== '') ? (parseFloat(er)  + parseFloat(el))  / 2 : null;
+  const surfAvg = (sr !== '' && sl  !== '') ? (parseFloat(sr)  + parseFloat(sl))  / 2 : null;
+  const texAvg  = (tr_ !== '' && tl !== '') ? (parseFloat(tr_) + parseFloat(tl))  / 2 : null;
+  const avgEl = (id, v) => { const e = document.getElementById(id); if (e) e.textContent = v !== null ? v.toFixed(1) : '—'; };
+  avgEl('ci_edge_avg', edgeAvg);
+  avgEl('ci_surf_avg', surfAvg);
+  avgEl('ci_tex_avg',  texAvg);
+  if (edgeAvg !== null && surfAvg !== null && texAvg !== null) {
+    const total = edgeAvg + surfAvg + texAvg;
+    const totEl = document.getElementById('ci_total');
+    const resEl = document.getElementById('ci_result');
+    if (!totEl || !resEl) return;
+    totEl.textContent = total.toFixed(1);
+    let color, html;
+    if (total >= 6.5) {
+      color = '#b91c1c';
+      html = '<b style="color:' + color + '">肝硬化 Cirrhosis（Stage F4）</b><br>總分 ≥ 6.5 — 研究中所有病人均為第 4 期纖維化，作者認為此分數對肝硬化具 <b>100% 特異度</b>。建議積極追蹤並轉介肝臟科。';
+    } else if (total > 0) {
+      color = '#d97706';
+      html = '<b style="color:' + color + '">慢性肝病變 Chronic liver disease</b><br>總分 &gt; 0 代表有肝實質變化。分數 &lt; 6.5 不排除輕至中度纖維化，請結合 FIB-4 / APRI / Fibroscan 及臨床判讀。';
+    } else {
+      color = '#047857';
+      html = '<b style="color:' + color + '">正常 Normal</b><br>三項特徵均無異常，超音波上無慢性肝病變表現。';
+    }
+    totEl.style.color = color;
+    resEl.innerHTML = html;
+  }
 }
 
 /* ---------------- boot ---------------- */
