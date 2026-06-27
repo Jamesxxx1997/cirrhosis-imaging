@@ -146,7 +146,8 @@ function renderImaging() {
       <p class="summary">左右肝葉各打一分 → 自動計算三項平均並加總 → 判斷結果</p>
 
       <div style="margin-bottom:14px;">
-        <div style="font-size:13px;font-weight:700;color:var(--teal-700);margin-bottom:6px;">① 肝緣 Liver Edge　<span style="font-weight:400;font-size:11.5px;color:var(--ink-soft);">高頻 0–1 / 低頻 2</span></div>
+        <div style="font-size:13px;font-weight:700;color:var(--teal-700);margin-bottom:3px;">① 肝緣 Liver Edge</div>
+        <div style="font-size:11.5px;color:var(--ink-soft);margin-bottom:7px;line-height:1.5;">0 = 高頻探頭下銳利，無異常　｜　1 = 高頻下可見輕度鈍化（低頻探頭看不到）　｜　2 = 低頻探頭下明顯鈍化</div>
         <div style="display:grid;grid-template-columns:1fr 1fr 80px;gap:10px;align-items:end;">
           <div><label for="ci_edge_r">右肝 Right</label>
             <select id="ci_edge_r" onchange="pldCalcCI()">
@@ -170,7 +171,8 @@ function renderImaging() {
       </div>
 
       <div style="margin-bottom:14px;">
-        <div style="font-size:13px;font-weight:700;color:var(--teal-700);margin-bottom:6px;">② 肝表面 Liver Surface　<span style="font-weight:400;font-size:11.5px;color:var(--ink-soft);">高頻 0–1 / 低頻 2–3</span></div>
+        <div style="font-size:13px;font-weight:700;color:var(--teal-700);margin-bottom:3px;">② 肝表面 Liver Surface</div>
+        <div style="font-size:11.5px;color:var(--ink-soft);margin-bottom:7px;line-height:1.5;">0 = 高頻下平滑，無異常　｜　1 = 高頻下可見輕度不規則（低頻看不到）　｜　2 = 低頻下可見不規則　｜　3 = 低頻下高度不規則</div>
         <div style="display:grid;grid-template-columns:1fr 1fr 80px;gap:10px;align-items:end;">
           <div><label for="ci_surf_r">右肝 Right</label>
             <select id="ci_surf_r" onchange="pldCalcCI()">
@@ -196,7 +198,8 @@ function renderImaging() {
       </div>
 
       <div style="margin-bottom:14px;">
-        <div style="font-size:13px;font-weight:700;color:var(--teal-700);margin-bottom:6px;">③ 肝實質紋理 Parenchymal Texture　<span style="font-weight:400;font-size:11.5px;color:var(--ink-soft);">高頻 0–1 / 低頻 2–3</span></div>
+        <div style="font-size:13px;font-weight:700;color:var(--teal-700);margin-bottom:3px;">③ 肝實質紋理 Parenchymal Texture</div>
+        <div style="font-size:11.5px;color:var(--ink-soft);margin-bottom:7px;line-height:1.5;">0 = 高頻下細緻，無異常　｜　1 = 高頻下可見輕度粗糙（低頻看不到）　｜　2 = 低頻下可見粗糙　｜　3 = 低頻下高度粗糙<br>技巧：肝實質與脾臟回音相近 → 相對正常；肝明顯粗過脾 → 異常</div>
         <div style="display:grid;grid-template-columns:1fr 1fr 80px;gap:10px;align-items:end;">
           <div><label for="ci_tex_r">右肝 Right</label>
             <select id="ci_tex_r" onchange="pldCalcCI()">
