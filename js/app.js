@@ -233,8 +233,20 @@ function renderImaging() {
       </div>
     </div>
 
+    <div class="section-card" style="margin-bottom:12px;border-left:4px solid #0ea5e9;background:#f0f9ff;">
+      <div style="font-size:13.5px;font-weight:700;color:#0369a1;margin-bottom:10px;">臨床閾值整理 Score Interpretation</div>
+      <table style="width:100%;border-collapse:collapse;font-size:12px;">
+        <tr style="background:#e0f2fe;"><th style="padding:5px 8px;border:1px solid #bae6fd;text-align:left;">總分範圍</th><th style="padding:5px 8px;border:1px solid #bae6fd;">判讀</th><th style="padding:5px 8px;border:1px solid #bae6fd;">論文數據（n=103）</th></tr>
+        <tr><td style="padding:5px 8px;border:1px solid var(--line);font-weight:700;color:#047857;">= 0</td><td style="padding:5px 8px;border:1px solid var(--line);">正常 — Stage 0 可能</td><td style="padding:5px 8px;border:1px solid var(--line);">6/8 Stage 0 患者落於此分數</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:5px 8px;border:1px solid var(--line);font-weight:700;color:#0369a1;">&gt; 0 且 ≤ 3</td><td style="padding:5px 8px;border:1px solid var(--line);">輕度纖維化（Stage 0–1）</td><td style="padding:5px 8px;border:1px solid var(--line);">Stage 0–1 患者全數 ≤ 3（<b>sensitivity 100%</b>）；分數 ≤ 3 有 42/53 屬 Stage 0–1（specificity 79.2%）</td></tr>
+        <tr><td style="padding:5px 8px;border:1px solid var(--line);font-weight:700;color:#d97706;">&gt; 3 且 &lt; 6.5</td><td style="padding:5px 8px;border:1px solid var(--line);">中間帶（Stage 2–3 可能）</td><td style="padding:5px 8px;border:1px solid var(--line);">Bridging fibrosis 區間；無法以此閾值確診或排除</td></tr>
+        <tr style="background:#fff1f1;"><td style="padding:5px 8px;border:1px solid var(--line);font-weight:700;color:#b91c1c;">≥ 6.5</td><td style="padding:5px 8px;border:1px solid var(--line);">肝硬化（Stage 4）</td><td style="padding:5px 8px;border:1px solid var(--line);">所有 Stage 4 均 ≥ 6.5（<b>sensitivity 100%</b>）；所有 ≥ 6.5 者均為 Stage 4（<b>PPV 100%</b>）</td></tr>
+      </table>
+      <p style="font-size:11px;color:var(--ink-soft);margin:6px 0 0;">以上閾值來自單一研究（n=103，日本慢性肝病患者）；請結合 FIB-4 / APRI / Fibroscan 及臨床整合。</p>
+    </div>
+
     <div style="background:#fef3e2;border:1px solid #fde68a;border-radius:8px;padding:11px 14px;font-size:12px;color:#92400e;line-height:1.5;margin-bottom:8px;">
-      <b>Reference</b>：Nishiura T et al. "Ultrasound evaluation of the fibrosis stage in chronic liver disease by the simultaneous use of low and high frequency probes." <i>Br J Radiol</i> 2005;78:189–197. · 主要閾值：≥ 6.5 對肝硬化 sensitivity &amp; PPV 均 100%；≤ 3 對 Stage 0–1 sensitivity 100%（單一研究，n=103）。
+      <b>Reference</b>：Nishiura T, Watanabe H, Ito M, et al. "Ultrasound evaluation of the fibrosis stage in chronic liver disease by the simultaneous use of low and high frequency probes." <i>Br J Radiol</i> 2005;78(928):189–197. doi:10.1259/bjr/75208448
     </div>
   `;
 
