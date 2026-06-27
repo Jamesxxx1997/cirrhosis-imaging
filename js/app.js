@@ -113,7 +113,7 @@ function renderImaging() {
     </div>
 
     <div class="section-card" style="margin-bottom:16px;">
-      <p style="font-size:13px;color:var(--ink-soft);margin:0 0 12px;">評估三個超音波特徵（肝緣、肝表面、肝實質紋理），<b>左右肝葉分別打分後取平均</b>，三項平均分相加為總分（0–8）。<br>高頻（5–12 MHz）偵測輕度變化；低頻（2–5 MHz）確認重度變化。</p>
+      <p style="font-size:13px;color:var(--ink-soft);margin:0 0 12px;">評估三個超音波特徵（肝緣、肝表面、肝實質紋理），<b>左右肝葉分別打分後取平均</b>，三項平均分相加為總分（0–8）。<br>高頻（5–12 MHz）偵測輕度變化；低頻（2–5 MHz）確認中重度變化。</p>
       <table style="width:100%;border-collapse:collapse;font-size:12.5px;">
         <tr style="background:var(--teal-100);"><th style="padding:6px 8px;text-align:left;border:1px solid var(--line);">特徵</th><th style="padding:6px 8px;border:1px solid var(--line);">0 分</th><th style="padding:6px 8px;border:1px solid var(--line);">1 分</th><th style="padding:6px 8px;border:1px solid var(--line);">2 分</th><th style="padding:6px 8px;border:1px solid var(--line);">3 分</th><th style="padding:6px 8px;border:1px solid var(--line);">範圍</th></tr>
         <tr><td style="padding:5px 8px;border:1px solid var(--line);font-weight:700;">肝緣 Liver edge</td><td style="padding:5px 8px;border:1px solid var(--line);">銳利（高頻）</td><td style="padding:5px 8px;border:1px solid var(--line);">輕度鈍化（高頻）</td><td style="padding:5px 8px;border:1px solid var(--line);">明顯鈍化（低頻）</td><td style="padding:5px 8px;border:1px solid var(--line);color:#9ca3af;">—</td><td style="padding:5px 8px;border:1px solid var(--line);">0–2</td></tr>
@@ -521,7 +521,7 @@ function pldCalcCI() {
       html = '<b style="color:' + color + '">輕度纖維化 Mild fibrosis（Stage 0–1 可能）</b><br>總分 &gt; 0 且 ≤ 3 — 研究中 42/53 分數 ≤ 3 的患者屬 Stage 0–1（specificity 79.2%）。有輕度肝實質變化，建議追蹤。';
     } else {
       color = '#047857';
-      html = '<b style="color:' + color + '">正常（Stage 0 可能）</b><br>總分 = 0 — 三項特徵均無異常。研究中 6/8 Stage 0 患者落於此分數（仍需臨床整合）。';
+      html = '<b style="color:' + color + '">正常（Stage 0 可能）</b><br>總分 = 0 — 三項特徵均無異常。研究中 6/8 Stage 0 患者落於此分數（sensitivity 75%，仍需臨床整合）。';
     }
     totEl.style.color = color;
     resEl.innerHTML = html;
