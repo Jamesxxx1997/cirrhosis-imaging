@@ -57,7 +57,10 @@ const FINDINGS = [
           '量測：以通過主門靜脈的矢狀線分界,Caudate(C) 與 Right lobe(RL) 各取橫徑',
           '判讀：>0.65 約 96% 可能為肝硬化;>0.73 約 99% 可能為肝硬化',
         ],
-        image: { src: 'assets/crl_ratio_us.png', caption: 'Fig 2–4(右圖 Fig 4):主門靜脈分叉處橫切面。HBV 肝硬化患者 C/RL 增加,主因右葉萎縮。CL=caudate lobe, RL=right lobe, AO=aorta, LPV=left portal vein (Makuuchi et al. Radiology 1987)' },
+        images: [
+          { src: 'assets/crl_us_fig8.png', caption: 'Fig. 8. Axial slice immediately below the bifurcation of the main portal vein. A parasagittal line through the right lateral border of the portal vein and a second through the left lateral border of the caudate lobe define C and RL on an orthogonal line drawn to the right liver edge. Ratio = 43.1/92.0 = 0.47 — noncirrhotic by threshold, yet this patient had cirrhosis, illustrating high specificity but lower sensitivity.' },
+          { src: 'assets/crl_us_fig8_1.png', caption: 'Fig. 8.1. Caudate lobe hypertrophy with right lobe hypotrophy. C/RL = 68.9/83.7 = 0.82, consistent with chronic liver disease / cirrhosis.' },
+        ],
         ref: { label: 'Makuuchi et al. Radiology 1987;165(2):289–93', url: 'https://pubmed.ncbi.nlm.nih.gov/3532188/' },
       },
     },
