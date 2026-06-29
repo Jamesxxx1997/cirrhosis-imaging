@@ -42,8 +42,8 @@ const FINDINGS = [
     modality: ['US', 'CT'],
     us: {
       points: [
-        '右葉萎縮:體積縮小',
-        '尾狀葉肥大(Caudate Lobe Hypertrophy):重要指標,常與左肝外側葉肥大同時出現',
+        '早期肥大:常見於尾狀葉(Segment I)與左肝外側葉(Segments II, III)',
+        '晚期萎縮:常見於右肝後葉(Segments VI, VII)與左肝內側葉(Segment IV)',
         '實質回音(Coarse Parenchyma):肝實質回音變得粗糙(coarseness)且不均',
       ],
       images: [
