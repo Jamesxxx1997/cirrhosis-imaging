@@ -325,7 +325,10 @@ function renderModalityPanel(label, data) {
   }
   if (data.quantitative) {
     const q = data.quantitative;
-    body += `<div class="subhead">${esc(q.title)}</div><ul>${li(q.points)}</ul>${imgStrip([q.image])}`;
+    const refHtml = q.ref
+      ? `<p class="ref-link"><a href="${q.ref.url}" target="_blank" rel="noopener">Reference: ${esc(q.ref.label)}</a></p>`
+      : '';
+    body += `<div class="subhead">${esc(q.title)}</div><ul>${li(q.points)}</ul>${imgStrip([q.image])}${refHtml}`;
   }
   return `<div class="modality-panel"><h3>${label}</h3>${body}</div>`;
 }

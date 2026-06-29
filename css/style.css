@@ -276,6 +276,19 @@ main {
   padding: 6px 9px;
 }
 
+.ref-link {
+  font-size: 12px;
+  margin: 4px 0 10px;
+  color: var(--ink-soft);
+}
+.ref-link a {
+  color: var(--teal-600);
+  text-decoration: none;
+}
+.ref-link a:hover {
+  text-decoration: underline;
+}
+
 .crosslink-box {
   margin-top: 10px;
   border: 1px dashed var(--teal-600);

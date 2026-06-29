@@ -37,7 +37,7 @@ const FINDINGS = [
   },
   {
     id: 'morphology',
-    name: '肝臟形態與體積',
+    name: '肝臟形態體積與C/RL比值',
     nameEn: 'Morphology & Volume',
     modality: ['US', 'CT'],
     us: {
@@ -47,10 +47,19 @@ const FINDINGS = [
         '實質回音(Coarse Parenchyma):肝實質回音變得粗糙(coarseness)且不均',
       ],
       images: [
-        { src: 'assets/caudate_us_1.gif', caption: '右肋間掃描,量測 caudate lobe 與 left lobe 厚度(本例 caudate 5.91cm)' },
         { src: 'assets/caudate_us_2.jpg', caption: '灰階超音波,肝實質回音粗糙不均' },
-        { src: 'assets/caudate_us_3.png', caption: 'Sagittal grey-scale US:enlarged caudate lobe,AP 徑 7.6cm(Erden A. Eur J Radiol 2007;61:44–56)' },
       ],
+      quantitative: {
+        title: 'C/RL ratio — 超音波量測切面',
+        points: [
+          '切面：橫切面 / transverse plane at the bifurcation of the main portal vein',
+          '位置：porta hepatis,main portal vein 分叉成左右門靜脈附近',
+          '量測：以通過主門靜脈的矢狀線分界,Caudate(C) 與 Right lobe(RL) 各取橫徑',
+          '判讀：>0.65 約 96% 可能為肝硬化;>0.73 約 99% 可能為肝硬化',
+        ],
+        image: { src: 'assets/crl_ratio_us.png', caption: 'Fig 2–4(右圖 Fig 4):主門靜脈分叉處橫切面。HBV 肝硬化患者 C/RL 增加,主因右葉萎縮。CL=caudate lobe, RL=right lobe, AO=aorta, LPV=left portal vein (Makuuchi et al. Radiology 1987)' },
+        ref: { label: 'Makuuchi et al. Radiology 1987;165(2):289–93', url: 'https://pubmed.ncbi.nlm.nih.gov/3532188/' },
+      },
     },
     ct: {
       points: [
